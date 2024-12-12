@@ -1,57 +1,71 @@
-/* src/components/Tooltip.css */
 .tooltip-container {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .tooltip {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.75);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    z-index: 1000;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .tooltip-container:hover .tooltip {
-    opacity: 1;
-  }
-  
-  .tooltip-top {
-    bottom: 100%; /* Подсказка выше элемента */
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 10px;
-  }
-  
-  .tooltip-bottom {
-    top: 100%; /* Подсказка ниже элемента */
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 10px;
-  }
-  
-  .tooltip-left {
-    top: 50%;
-    right: 100%; /* Подсказка слева от элемента */
-    transform: translateY(-50%);
-    margin-right: 10px;
-  }
-  
-  .tooltip-right {
-    top: 50%;
-    left: 100%; /* Подсказка справа от элемента */
-    transform: translateY(-50%);
-    margin-left: 10px;
-  }
-  
-  /* Новый стиль для размещения подсказок в колонку */
-  .tooltip-column {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Отступы между элементами */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 270px;
+  gap: 20px;
+}
+
+.tooltip {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.tooltip-content {
+  cursor: pointer;
+  text-align: center;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 8px 12px;
+  position: absolute;
+  z-index: 1;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip-text.top {
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 8px;
+}
+
+.tooltip-text.bottom {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+}
+
+.tooltip-text.left {
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 8px;
+}
+
+.tooltip-text.right {
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 8px;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}

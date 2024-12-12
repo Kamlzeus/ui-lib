@@ -1,24 +1,33 @@
+/* Общие стили кнопки */
 .myButton {
   min-width: 150px;
   height: 40px;
   border: none;
   color: rgb(88, 0, 0);
   border-radius: 8px;
-
   font-size: 18px;
   transition: all 0.5s ease-in-out;
+  margin: 10px; /* Расстояние между кнопками */
 }
 
+/* Hover эффект для всех кнопок */
 .myButton:hover {
   background-color: rgb(0, 243, 8);
   color: rgb(255, 255, 255);
 }
 
+/* Вариант bordered */
 .myButton--bordered {
   color: rgb(88, 0, 0);
   background-color: rgb(255, 0, 128);
 }
 
+.myButton--bordered:hover {
+  color: rgb(88, 0, 0);
+  background-color: rgb(0, 243, 8);
+}
+
+/* Вариант primary */
 .myButton--primary {
   border: none;
   color: rgb(88, 0, 0);
@@ -31,11 +40,7 @@
   color: rgb(255, 255, 255);
 }
 
-.myButton--bordered:hover {
-  color: rgb(88, 0, 0);
-  background-color: rgb(0, 243, 8);
-}
-
+/* Размеры кнопок */
 .myButton--lg {
   height: 50px;
   width: 160px;
@@ -52,4 +57,12 @@
   padding: 5px 10px;
   height: 30px;
   width: 150px;
+}
+
+/* Заблокированное состояние */
+.myButton:disabled {
+  background-color: rgb(200, 200, 200);
+  color: rgb(120, 120, 120);
+  cursor: not-allowed;
+  border: none;
 }

@@ -1,7 +1,36 @@
 .heading {
-    font-size: 2.5rem;   /* Размер шрифта для всех заголовков */
-    font-weight: bold;   /* Жирное начертание */
-    margin: 0;           /* Убираем отступы */
-    padding: 0;          /* Убираем паддинги */
-    line-height: 1.2;    /* Межстрочный интервал */
-  }
+  margin: 10px 0;
+  font-weight: bold;
+  color: #000000;
+  text-align: left;
+}
+
+.heading-1 {
+  font-size: 48px;
+  line-height: 1.2;
+}
+
+.heading-2 {
+  font-size: 40px;
+  line-height: 1.3;
+}
+
+.heading-3 {
+  font-size: 32px;
+  line-height: 1.4;
+}
+
+.heading-4 {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.heading-5 {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.heading-6 {
+  font-size: 16px;
+  line-height: 1.7;
+}

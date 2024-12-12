@@ -1,30 +1,67 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import Button from "./components/Button";
-import Input from './components/Input/input';
-import Typography from './components/Typography/Typography';
-import Heading from './components/Heading/Heading';
-import Tooltip from './components/Tooltip/Tooltip';
+import Input from "./components/Input/input";
+import Typography from "./components/Typography/Typography";
+import Heading from "./components/Heading/Heading";
+import Tooltip from "./components/Tooltip/Tooltip";
+import Accordion from "./components/Accordion/Accordion";
+
 function App() {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
 
   const handleInputChange = (newValue) => {
     setValue(newValue);
   };
 
+  const handleClick = (message) => {
+    alert(message);
+  };
+
   return (
     <>
       <div>
-        <Button size="lg">Confirm</Button>
-        <Button size="md">Confirm</Button>
-        <Button size="sm">Confirm</Button>
+        <Button
+          type="button"
+          size="lg"
+          variant="primary"
+          onClick={() => handleClick("Click")}
+        >
+          Confirm
+        </Button>
+        <Button
+          type="button"
+          size="md"
+          variant="primary"
+          onClick={() => handleClick("Click")}
+        >
+          Confirm
+        </Button>
+        <Button
+          type="button"
+          size="sm"
+          variant="primary"
+          onClick={() => handleClick("Click")}
+        >
+          Confirm
+        </Button>
         <br />
-        <Button size="lg" variant="bordered">
+        <Button
+          type="button"
+          size="lg"
+          variant="bordered"
+          onClick={() => handleClick("Click")}
+        >
           Cancel
         </Button>
-        <Button size="md" variant="bordered">
+        <Button
+          type="button"
+          size="md"
+          variant="bordered"
+          onClick={() => handleClick("Click")}
+        >
           Cancel
         </Button>
-        <Button size="sm" variant="bordered">
+        <Button type="button" size="sm" variant="bordered" disabled>
           Cancel
         </Button>
       </div>
@@ -54,60 +91,76 @@ function App() {
           danger={true}
         />
       </div>
-      <div>
-      <Typography textSize="sm">
-        SM. Our mission is to redefine the model of learning and re-engineer
-        its process by providing innovative administrative and instructional
-        technologies. Click here for our beliefs. If you are a school
-        administrator and would like to use ecourse.org for your classes,
-        please create school profiles. Instructors and students may signup
-        independent user account. For questions, contact us.
-      </Typography>
+      <div style={{ padding: "20px" }}>
+        <Typography textSize="sm">
+          SM. Our mission is to redefine the model of learning and re-engineer
+          its process by providing innovative administrative and instructional
+          technologies. Click here for our beliefs. If you are a school
+          administrator and would like to use ecourse.org for your classes,
+          please create school profiles. Instructors and students may signup
+          independent user account. For questions, contact us.
+        </Typography>
 
-      <Typography textSize="md" className="typography-custom">
-        MD. Our mission is to redefine the model of learning and re-engineer
-        its process by providing innovative administrative and instructional
-        technologies. Click here for our beliefs. If you are a school
-        administrator and would like to use ecourse.org for your classes,
-        please create school profiles. Instructors and students may signup
-        independent user account. For questions, contact us.
-      </Typography>
+        <Typography textSize="md">
+          MD. Our mission is to redefine the model of learning and re-engineer
+          its process by providing innovative administrative and instructional
+          technologies. Click here for our beliefs. If you are a school
+          administrator and would like to use ecourse.org for your classes,
+          please create school profiles. Instructors and students may signup
+          independent user account. For questions, contact us.
+        </Typography>
 
-      <Typography textSize="lg">
-        LG. Our mission is to redefine the model of learning and re-engineer
-        its process by providing innovative administrative and instructional
-        technologies. Click here for our beliefs. If you are a school
-        administrator and would like to use ecourse.org for your classes,
-        please create school profiles. Instructors and students may signup
-        independent user account. For questions, contact us.
-      </Typography>
+        <Typography textSize="lg">
+          LG. Our mission is to redefine the model of learning and re-engineer
+          its process by providing innovative administrative and instructional
+          technologies. Click here for our beliefs. If you are a school
+          administrator and would like to use ecourse.org for your classes,
+          please create school profiles. Instructors and students may signup
+          independent user account. For questions, contact us.
+        </Typography>
       </div>
-      
-      <div>
-      <Heading level={1}>H1. Heading</Heading>
-      <Heading level={2}>H2. Heading</Heading>
-      <Heading level={3}>H3. Heading</Heading>
-      <Heading level={4}>H4. Heading</Heading>
-      <Heading level={5}>H5. Heading</Heading>
-      <Heading level={6}>H6. Heading</Heading>
+
+      <div style={{ padding: "20px", maxWidth: "600px" }}>
+        <Heading level={1}>H1. Heading</Heading>
+        <Heading level={2}>H2. Heading</Heading>
+        <Heading level={3}>H3. Heading</Heading>
+        <Heading level={4}>H4. Heading</Heading>
+        <Heading level={5}>H5. Heading</Heading>
+        <Heading level={6}>H6. Heading</Heading>
       </div>
-      
-      <div className="tooltip-column">
-        <Tooltip text="Tooltip text" position="top">
-          <div>Top Tooltip</div>
+
+      <div className="tooltip-container">
+        <Tooltip text="I am a tooltip" position="top">
+          Tooltip Top
         </Tooltip>
 
-        <Tooltip text="Tooltip text" position="bottom">
-          <div>Bottom Tooltip</div>
+        <Tooltip text="I am a tooltip" position="left">
+          Tooltip Left
         </Tooltip>
 
-        <Tooltip text="Tooltip text" position="left">
-          <div>Left Tooltip</div>
+        <Tooltip text="I am a tooltip" position="right">
+          Tooltip Right
         </Tooltip>
 
-        <Tooltip text="Tooltip text" position="right">
-          <div>Right Tooltip</div>
+        <Tooltip text="I am a tooltip" position="bottom">
+          Tooltip Bottom
         </Tooltip>
+      </div>
+
+      <div style={{ padding: "20px", maxWidth: "600px" }}>
+        <Accordion title="Accordion">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </Accordion>
+
+        <Accordion title="Accordion Expanded" defaultOpen>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </Accordion>
       </div>
     </>
   );
