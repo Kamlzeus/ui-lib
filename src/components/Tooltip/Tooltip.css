@@ -1,0 +1,57 @@
+/* src/components/Tooltip.css */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .tooltip-container:hover .tooltip {
+    opacity: 1;
+  }
+  
+  .tooltip-top {
+    bottom: 100%; /* Подсказка выше элемента */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+  }
+  
+  .tooltip-bottom {
+    top: 100%; /* Подсказка ниже элемента */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+  }
+  
+  .tooltip-left {
+    top: 50%;
+    right: 100%; /* Подсказка слева от элемента */
+    transform: translateY(-50%);
+    margin-right: 10px;
+  }
+  
+  .tooltip-right {
+    top: 50%;
+    left: 100%; /* Подсказка справа от элемента */
+    transform: translateY(-50%);
+    margin-left: 10px;
+  }
+  
+  /* Новый стиль для размещения подсказок в колонку */
+  .tooltip-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Отступы между элементами */
+  }
+  

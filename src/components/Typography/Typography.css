@@ -1,0 +1,20 @@
+.typography-sm {
+    font-size: 12px;
+  }
+  
+  .typography-md {
+    font-size: 16px;
+  }
+  
+  .typography-lg {
+    font-size: 18px;
+  }
+  
+  .typography-sm, .typography-md, .typography-lg {
+    text-indent: 1.5em;
+  }
+  
+  .typography-custom {
+    font-weight: bold;
+  }
+  
